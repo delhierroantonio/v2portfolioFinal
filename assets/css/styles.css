@@ -1,2 +1,41 @@
-body {
-  background-color: gray; }
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@300;500&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+* {
+  margin: 0; }
+
+html {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Oswald', sans-serif; }
+
+p,
+a {
+  font-family: 'Raleway', sans-serif; }
+
+.navbar-nav {
+  position: absolute;
+  right: 0; }
+
+.logo__container img {
+  max-width: 10rem; }
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }

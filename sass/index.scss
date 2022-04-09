@@ -1,3 +1,12 @@
-body {
-    background-color: gray;
-}
+// reset
+@import'./misc/normalize';
+// variables
+@import'./misc/variables';
+// partials
+@import'./partials/header';
+@import'./partials/footer';
+// views
+@import'./views/about';
+@import'./views/contact';
+@import'./views/portfolio';
+@import'./views/contact';

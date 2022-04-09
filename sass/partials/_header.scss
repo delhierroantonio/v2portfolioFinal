@@ -1,0 +1,19 @@
+.navbar-nav {
+    position: absolute;
+    right: 0;
+}
+
+.logo__container {
+    img {
+        max-width: 10rem;
+    }
+}
+
+@media (max-width:992px) {
+    .navbar-nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
