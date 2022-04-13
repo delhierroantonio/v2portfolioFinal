@@ -1,0 +1,156 @@
+header {
+    width: 100%;
+    min-height: 100%;
+    background-color: $black;
+
+    // navbar
+    .nav {
+        @include flex(column, space-between, center);
+        padding: 1em 2em;
+        margin: 0 4em;
+        height: 13vh;
+
+        &__logo {
+            color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+            font-family: $title;
+            font-size: $md;
+            letter-spacing: .3rem;
+            @include linkTransition;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        &__links {
+            @include flex(row, space-between, center);
+            gap: 1.5em;
+        }
+
+        &__link {
+            color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+            font-size: $sm;
+            @include linkTransition;
+
+            &--active {
+                color: $white;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    // navbar queries
+    @include breakpoint(md) {
+        .nav {
+            @include flex(row, space-between, center);
+
+            &__logo {
+                font-size: $xl;
+                letter-spacing: .4rem;
+            }
+
+            &__links {
+                @include flex(row, space-between, center);
+                gap: 2.2em;
+            }
+
+            &__link {
+                font-size: $md;
+            }
+        }
+    }
+
+    // hero
+    .hero {
+        position: relative;
+        min-width: 100%;
+        min-height: 100vh;
+        padding: 1em 2em;
+        text-align: center;
+        @include flex(row, center, center);
+        overflow: hidden;
+        z-index: 100;
+
+        &__content {
+            @include flex(column, center, center);
+            padding: 1em 2em;
+            z-index: 91;
+            background: rgba(33, 37, 41, 0.65);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9.8px);
+            -webkit-backdrop-filter: blur(9.8px);
+            border: 1px solid rgba(33, 37, 41, 0.34);
+
+            &__title {
+                color: $white;
+                font-size: $xxl;
+                letter-spacing: .4rem;
+            }
+
+            &__subtitle {
+                color: $white;
+                font-size: $md;
+                font-weight: 200;
+                letter-spacing: .3rem;
+                line-height: 1.4;
+                margin: .8em 0;
+            }
+
+            &__btn {
+                font-size: $sm;
+                font-weight: bold;
+                margin: 1em 0;
+                @include btn;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.8);
+                    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+                    background-color: $black;
+                }
+            }
+        }
+
+        &__video {
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 90;
+            }
+        }
+    }
+}
+
+// social bar
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 1em 1.6em;
+    background-color: $white;
+    background-size: 5rem 5rem;
+    background-image: radial-gradient($gray 1px, transparent 1px);
+
+
+    &__social {
+        @include flex(row, center, center);
+        gap: 2em;
+        @include btnTransition;
+        border-bottom: 2px solid $black;
+        padding: 2em 1em;
+
+        &__icon {
+            &:hover {
+                transform: rotateX(30deg);
+            }
+        }
+    }
+}

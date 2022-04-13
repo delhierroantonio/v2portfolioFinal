@@ -1,2 +1,24 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Raleway:wght@200;300;500&display=swap');
+// **-----------variables
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@300;500&display=swap');
+$title: 'Poppins',
+sans-serif;
+$text:'Raleway',
+sans-serif;
+// colors
+$black: #212529;
+$ash: #3b3636;
+$white: #f8f9fa;
+$gray: #3c4044;
+// sizes
+$xxl: 4.4rem;
+$xl: 3.2rem;
+$md: 2.4rem;
+$sm: 1.6rem;
+// **-----------maps
+$sizes: ("xxl": $xxl,
+    "xl": $xl,
+    "md": $md,
+    "sm": $sm,
+);

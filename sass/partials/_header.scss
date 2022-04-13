@@ -1,19 +1,35 @@
-.navbar-nav {
-    position: absolute;
-    right: 0;
-}
+// bootstrap navbar
+.navbar {
+    min-height: 10vh;
+    background-color: $black;
 
-.logo__container {
-    img {
-        max-width: 10rem;
-    }
-}
-
-@media (max-width:992px) {
-    .navbar-nav {
-        position: relative;
+    &-nav {
+        position: absolute;
+        right: .75rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 2.2rem;
+    }
+
+    .nav {
+        &__logo {
+            width: 17rem;
+            filter: invert(100%);
+        }
+
+        &-link {
+            font-size: 2rem;
+            color: $white;
+            border-bottom: 2px solid transparent;
+            padding: .4rem;
+            @include linkTransition;
+
+            &:hover {
+                border-bottom: 2px solid $white;
+            }
+
+            &.active {
+                border-bottom: 2px solid $white;
+            }
+        }
     }
 }
