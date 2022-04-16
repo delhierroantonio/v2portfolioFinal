@@ -1,156 +1,224 @@
-header {
+header.index {
     width: 100%;
     min-height: 100%;
     background-color: $black;
+}
 
-    // navbar
-    .nav {
-        @include flex(column, space-between, center);
+// hero section
+.hero {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 1em 3em;
+    text-align: center;
+    @include flex(row, center, center);
+    overflow: hidden;
+    z-index: 100;
+
+    &__content {
+        @include flex(column, center, center);
         padding: 1em 2em;
-        margin: 0 4em;
-        height: 13vh;
+        z-index: 91;
+        background: rgba(33, 37, 41, 0.65);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.8px);
+        -webkit-backdrop-filter: blur(9.8px);
+        border: 1px solid rgba(33, 37, 41, 0.34);
 
-        &__logo {
-            color: rgba(0, 0, 0, 0.7);
-            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-            font-family: $title;
+        &__title {
+            color: $white;
+            font-size: $xxl;
+            letter-spacing: .4rem;
+        }
+
+        &__subtitle {
+            color: $white;
             font-size: $md;
+            font-weight: 200;
             letter-spacing: .3rem;
-            @include linkTransition;
+            line-height: 1.4;
+            margin: .8em 0;
 
-            &:hover {
-                color: rgba(0, 0, 0, 0.6);
+            span {
+                font-size: 2.5rem;
+                font-weight: 500;
+                text-decoration: underline;
             }
         }
 
-        &__links {
-            @include flex(row, space-between, center);
-            gap: 1.5em;
-        }
-
-        &__link {
-            color: rgba(0, 0, 0, 0.7);
-            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+        &__btn {
             font-size: $sm;
-            @include linkTransition;
-
-            &--active {
-                color: $white;
-            }
+            font-weight: bold;
+            margin: 1em 0;
+            @include btn;
 
             &:hover {
                 color: $white;
+                box-shadow: inset 0 0 0 2em $black;
             }
         }
     }
 
-    // navbar queries
-    @include breakpoint(md) {
-        .nav {
-            @include flex(row, space-between, center);
-
-            &__logo {
-                font-size: $xl;
-                letter-spacing: .4rem;
-            }
-
-            &__links {
-                @include flex(row, space-between, center);
-                gap: 2.2em;
-            }
-
-            &__link {
-                font-size: $md;
-            }
-        }
-    }
-
-    // hero
-    .hero {
-        position: relative;
-        min-width: 100%;
-        min-height: 100vh;
-        padding: 1em 2em;
-        text-align: center;
-        @include flex(row, center, center);
-        overflow: hidden;
-        z-index: 100;
-
-        &__content {
-            @include flex(column, center, center);
-            padding: 1em 2em;
-            z-index: 91;
-            background: rgba(33, 37, 41, 0.65);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(9.8px);
-            -webkit-backdrop-filter: blur(9.8px);
-            border: 1px solid rgba(33, 37, 41, 0.34);
-
-            &__title {
-                color: $white;
-                font-size: $xxl;
-                letter-spacing: .4rem;
-            }
-
-            &__subtitle {
-                color: $white;
-                font-size: $md;
-                font-weight: 200;
-                letter-spacing: .3rem;
-                line-height: 1.4;
-                margin: .8em 0;
-            }
-
-            &__btn {
-                font-size: $sm;
-                font-weight: bold;
-                margin: 1em 0;
-                @include btn;
-
-                &:hover {
-                    color: rgba(0, 0, 0, 0.8);
-                    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-                    background-color: $black;
-                }
-            }
-        }
-
-        &__video {
-            video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: 90;
-            }
+    &__video {
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 90;
         }
     }
 }
 
-// social bar
+
+// social bar section
 .main {
     width: 100%;
     height: 100%;
-    padding: 1em 1.6em;
+    background-color: $black;
+    padding: 2em 0;
+
+    &__social {
+        min-height: 13vh;
+        @include flex(row, center, center);
+        gap: 6em;
+        @include btnTransition;
+        padding: 1.6em 0;
+        background-color: $white;
+        background-size: 5rem 5rem;
+        background-image: radial-gradient($gray 1px, transparent 1px);
+
+        &__icon {
+            width: 3.5rem;
+            filter: contrast(75%);
+
+            &:hover {
+                filter: contrast(100%);
+                transform: scale(1.06);
+            }
+        }
+    }
+
+    &__content {
+        text-align: center;
+        background-color: $black;
+        background-size: 5rem 5rem;
+        background-image: radial-gradient($gray 1px, transparent 1px);
+        padding: 2em 3em;
+        @include flex(column, center, center);
+        gap: 1em;
+
+        &__title {
+            color: $white;
+            font-size: $xl;
+            letter-spacing: .5rem;
+        }
+
+        &__subtitle {
+            color: $white;
+            font-size: $md;
+            letter-spacing: .2em;
+            line-height: 1.4;
+        }
+    }
+
+    &__img {
+        padding: 2em 3em;
+        @include flex(row, center, center);
+
+        &__container {
+            border-radius: .4rem;
+            overflow: hidden;
+            @include flex(column, center, center);
+        }
+
+        img {
+            max-width: 100rem;
+            max-height: 100rem;
+            transform: rotate(5deg) scale(1.2);
+            -webkit-transition: .3s ease-in-out;
+            transition: .4s ease-in-out;
+
+            &:hover {
+                -webkit-transform: rotate(0) scale(1);
+                transform: rotate(0) scale(1);
+            }
+        }
+    }
+
+    @include breakpoint(md) {
+        .main__social__icon {
+            width: 6rem;
+        }
+    }
+}
+
+// steps seccion
+
+.devSteps {
+    padding: 1.5em 2em;
+    text-align: center;
     background-color: $white;
     background-size: 5rem 5rem;
     background-image: radial-gradient($gray 1px, transparent 1px);
 
+    &__title {
+        font-size: $xl;
+        letter-spacing: .4rem;
+        margin-bottom: 1em;
+    }
 
-    &__social {
-        @include flex(row, center, center);
-        gap: 2em;
-        @include btnTransition;
-        border-bottom: 2px solid $black;
-        padding: 2em 1em;
+    &__layout {
+        display: grid;
+        grid-auto-columns: 1fr;
+        gap: 1.8em;
+        grid-template-areas:
+            "wireframe"
+            "design"
+            "development"
+            "optimization";
+        padding: 0 3em;
 
-        &__icon {
-            &:hover {
-                transform: rotateX(30deg);
-            }
+        .design {
+            grid-area: design;
+        }
+
+        .development {
+            grid-area: development;
+        }
+
+        .optimization {
+            grid-area: optimization;
+        }
+
+        .wireframe {
+            grid-area: wireframe;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: $md;
+            font-weight: 500;
+            letter-spacing: .3rem;
+        }
+
+        img {
+            max-width: 50rem;
+            margin: 1em;
+            aspect-ratio: 1;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+    }
+
+    @include breakpoint(md) {
+        &__layout {
+            grid-template-areas:
+                "wireframe design"
+                "development optimization";
         }
     }
 }

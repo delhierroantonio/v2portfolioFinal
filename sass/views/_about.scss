@@ -1,0 +1,77 @@
+.about {
+    text-align: center;
+    background-color: $white;
+    background-size: 5rem 5rem;
+    background-image: radial-gradient(rgb(180, 180, 180) 1px, transparent 1px);
+    @include flex(column, center, center);
+    gap: 2em;
+    padding: 2em 3em;
+
+    img {
+        max-width: 50rem;
+        margin: 1em 0;
+    }
+
+    .first__content {
+        flex-basis: 40%;
+        order: 2;
+
+        &__title {
+            text-transform: uppercase;
+            font-size: $xl;
+            letter-spacing: .5rem;
+        }
+
+        &__text {
+            font-size: $md;
+            letter-spacing: .2rem;
+            line-height: 1.6;
+
+            span {
+                font-weight: bold;
+                color: purple;
+            }
+        }
+    }
+
+    .first__content__image {
+        flex-basis: 60%;
+        order: 1;
+    }
+
+    .second__content {
+        flex-basis: 40%;
+
+        &__title {
+            text-transform: uppercase;
+            font-size: $xl;
+            letter-spacing: .5rem;
+        }
+
+        &__subtitle {
+            text-transform: uppercase;
+            font-size: $md;
+            font-weight: 300;
+        }
+
+        &__text {
+            font-size: $md;
+            letter-spacing: .2rem;
+            line-height: 1.4;
+        }
+    }
+
+    .second__content__image {
+        flex-basis: 60%;
+    }
+
+    @include breakpoint(md) {
+        &__first {
+            @include flex(row, center, center);
+        }
+
+        &__second {
+            @include flex(row, center, center);
+        }
+    }
+}

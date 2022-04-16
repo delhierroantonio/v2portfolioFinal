@@ -1,35 +1,54 @@
-// bootstrap navbar
-.navbar {
-    min-height: 10vh;
+header {
+    width: 100%;
+    min-height: 100%;
     background-color: $black;
+}
 
-    &-nav {
-        position: absolute;
-        right: .75rem;
-        display: flex;
-        gap: 2.2rem;
+// navbar section
+.nav {
+    @include flex(column, space-between, center);
+    padding: 1em 2em;
+    margin: 0 2em;
+    height: 13vh;
+
+    &__logo {
+        width: 15rem;
+        filter: invert(100%);
+        @include linkTransition;
     }
 
-    .nav {
-        &__logo {
-            width: 17rem;
-            filter: invert(100%);
+    &__links {
+        @include flex(row, space-between, center);
+        gap: 1.5em;
+    }
+
+    &__link {
+        color: rgba(0, 0, 0, 1);
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+        font-size: $sm;
+        @include linkTransition;
+
+        &--active {
+            color: $white;
         }
 
-        &-link {
-            font-size: 2rem;
+        &:hover {
             color: $white;
-            border-bottom: 2px solid transparent;
-            padding: .4rem;
-            @include linkTransition;
+        }
+    }
+}
 
-            &:hover {
-                border-bottom: 2px solid $white;
-            }
+// navbar queries
+@include breakpoint(md) {
+    .nav {
+        @include flex(row, space-between, center);
 
-            &.active {
-                border-bottom: 2px solid $white;
-            }
+        &__links {
+            gap: 2.2em;
+        }
+
+        &__link {
+            font-size: $md;
         }
     }
 }

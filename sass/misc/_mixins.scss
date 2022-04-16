@@ -27,14 +27,20 @@
 
 // media queries
 @mixin breakpoint($point) {
-    @if $point==lg {
+    @if $point==xl {
         @media only screen and (min-width: 992px) {
             @content;
         }
     }
 
+    @if $point==lg {
+        @media only screen and (min-width: 990px) {
+            @content;
+        }
+    }
+
     @else if $point==md {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 665px) {
             @content;
         }
     }
