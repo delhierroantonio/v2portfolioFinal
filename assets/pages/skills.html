@@ -5,38 +5,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- styles css -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>socials</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>about</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled">Disabled</a>
+    <!-- -----------------------------------------------------------------header -->
+    <header>
+        <!-- navbar start -->
+        <nav class="nav">
+            <!-- nav logo -->
+            <a href="../../index.html">
+                <img src="../images/mainLogo.png" alt="logo" class="nav__logo">
+            </a>
+            <!-- nav links -->
+            <ul class="nav__links">
+                <a href="../../index.html">
+                    <li class="nav__link" title="home">Home</li>
+                </a>
+                <a href="./about.html" title="about">
+                    <li class="nav__link">About</li>
+                </a>
+                <a href="./skills.html" title="skills">
+                    <li class="nav__link nav__link--active">Skills</li>
+                </a>
+                <a href="./portfolio.html" title="portfolio">
+                    <li class="nav__link">Portfolio</li>
+                </a>
+                <a href="./contact.html" title="contact">
+                    <li class="nav__link">Contact</li>
+                </a>
+            </ul>
+        </nav>
+        <!-- navbar ends -->
+    </header>
+    <main>
+        <!-- -------------------------------------------------------------main -->
+        <section class="skills">
+            <!-- html section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/html.png" alt="html markup language image">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">HTML 5</p>
+                    <p class="skills__content__description">Semantic and well structured html.</p>
                 </div>
             </div>
-        </div>
-    </nav>
-    <h1>titulo prueba lol</h1>
-    <!-- bootstrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
-
+            <!-- css section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/css.png" alt="html markup language logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">CSS 3</p>
+                    <p class="skills__content__description">Modern css
+                        (flexbox, grid, responsive design).</p>
+                </div>
+            </div>
+            <!-- sass section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/sass.png" alt="sass preprocessor logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">SASS</p>
+                    <p class="skills__content__description">Variables, mixins, maps, functions, etc.</p>
+                </div>
+            </div>
+            <!-- bootstrap section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/bootstrap.png" alt="bootstrap framework logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">BOOTSTRAP V5</p>
+                    <p class="skills__content__description">Containers, components, utilities, helpers.</p>
+                </div>
+            </div>
+            <!-- js section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/javascript.png" alt="javascript logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">JAVASCRIPT</p>
+                    <p class="skills__content__description">Promises and async, ajax, fecth, DOM, JSON, etc.</p>
+                </div>
+            </div>
+            <!-- git section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/git.png" alt="git logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">GIT</p>
+                    <p class="skills__content__description">Branching, merging, pulling, commiting, etc.</p>
+                </div>
+            </div>
+            <!-- github section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/github.png" alt="Github logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">GITHUB</p>
+                    <p class="skills__content__description">Repositories, forking, pulling, merging.</p>
+                </div>
+            </div>
+            <!-- react section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/react.png" alt="react js logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">REACT JS</p>
+                    <p class="skills__content__description">JSX, components, props, lists-keys, methods, hooks, etc.
+                    </p>
+                </div>
+            </div>
+            <!-- node section-->
+            <div class="skills__box">
+                <picture class="skills__img">
+                    <img src="../images/nodejs.png" alt="node js logo">
+                </picture>
+                <div class="skills__content">
+                    <p class="skills__content__title">NODE JS</p>
+                    <p class="skills__content__description">Rest API, req methods, event loop, v8 engine, etc.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ---------------------------------------------------------------------footer -->
+    <footer class="footer">
+        <a href="../../index.html" title="home" class="footer__logo">
+            <img src="../images/mainLogo.png" alt="brand logo">
+        </a>
+        <p class="footer__copy">© roadtodev 2022</p>
+    </footer>
 </body>
 
 </html>
