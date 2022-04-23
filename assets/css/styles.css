@@ -381,10 +381,16 @@ header.index {
     justify-content: center;
     align-items: center; } }
 
-main h1 {
-  text-align: center;
-  font-size: 3.2rem;
-  margin: .8em 0; }
+main {
+  background-color: #f8f9fa;
+  background-size: 5rem 5rem;
+  background-image: radial-gradient(#727475 1px, transparent 1px); }
+  main h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4.4rem;
+    letter-spacing: .4rem;
+    padding: .8em 0; }
 
 .portfolio {
   display: flex;
@@ -441,6 +447,58 @@ main h1 {
       .portfolio__content__btn a:hover {
         color: black;
         background-color: #f8f9fa; }
+
+.contact {
+  background-color: #f8f9fa;
+  background-size: 5rem 5rem;
+  background-image: radial-gradient(#727475 1px, transparent 1px);
+  padding: 1.5em 2em; }
+  .contact .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contact .form__container {
+      width: 100%;
+      max-width: 100rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      padding: 1em 2em; }
+      .contact .form__container label {
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: .3rem;
+        width: 100%;
+        margin-bottom: 2em; }
+      .contact .form__container input {
+        color: #f8f9fa;
+        background-color: #212529;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: .5em 1em; }
+      .contact .form__container textarea {
+        resize: none;
+        width: 100%;
+        color: #f8f9fa;
+        background-color: #212529;
+        padding: .5em 1em; }
+      .contact .form__container button {
+        font-size: 2.2rem;
+        color: #f8f9fa;
+        background-color: #212529;
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: .5rem;
+        padding: .5em 2em;
+        transition: all .3s ease-in-out; }
+        .contact .form__container button:hover {
+          color: #212529;
+          background-color: #f8f9fa;
+          border: 2px solid #212529; }
 
 @media (max-width: 992px) {
   .navbar-nav {

@@ -1,0 +1,60 @@
+.contact {
+    background-color: $white;
+    background-size: 5rem 5rem;
+    background-image: radial-gradient($gray 1px, transparent 1px);
+    padding: 1.5em 2em;
+
+    .form {
+        @include flex(column, center, center);
+
+        &__container {
+            width: 100%;
+            max-width: 100rem;
+            @include flex(column, center, center);
+            gap: 1em;
+            padding: 1em 2em;
+
+            label {
+                font-size: $md;
+                font-weight: 500;
+                letter-spacing: .3rem;
+                width: 100%;
+                margin-bottom: 2em;
+            }
+
+            input {
+                color: $white;
+                background-color: $black;
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: .5em 1em;
+            }
+
+            textarea {
+                resize: none;
+                width: 100%;
+                color: $white;
+                background-color: $black;
+                padding: .5em 1em;
+            }
+
+            button {
+                font-size: $md;
+                color: $white;
+                background-color: $black;
+                outline: none;
+                border: 2px solid transparent;
+                border-radius: .5rem;
+                padding: .5em 2em;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: $black;
+                    background-color: $white;
+                    border: 2px solid $black;
+                }
+            }
+        }
+    }
+}
