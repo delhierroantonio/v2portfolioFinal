@@ -8,6 +8,11 @@
     background-size: 5rem 5rem;
     background-image: radial-gradient($gray 1px, transparent 1px);
 
+    h1 {
+        width: 100%;
+        /* use esta propiedad para sacarlo fuera del flex del padre*/
+    }
+
     &__box {
         min-height: 30rem;
         width: 33rem;
