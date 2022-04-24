@@ -13,7 +13,9 @@
     <!-- meta autor -->
     <meta name="author" content="ANTONIO DEL HIERRO">
     <!-- favicon -->
-    <link rel="favicon" href="assets/favicon/favicon.ico">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+    <!-- aos -->
+    <link rel="stylesheet" href="./assets/css/aos.css" />
     <!-- styles css -->
     <link rel="preload" href="assets/css/styles.css" as="style">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -93,7 +95,8 @@
         </section>
         <!-- main image -->
         <div class="main__img">
-            <div class="main__img__container">
+            <div class="main__img__container" data-aos="fade-zoom-in" data-aos-offset="300"
+                data-aos-easing="ease-in-sine" data-aos-duration="600">
                 <img loading="lazy" src="./assets/images/frameImg.png" alt="code on screen image">
             </div>
         </div>
@@ -105,28 +108,32 @@
         <h2 class="devSteps__title">Making it fast, responsive, intuitive and dynamic</h2>
         <div class="devSteps__layout">
             <!-- wireframe -->
-            <div class="wireframe">
+            <div class="wireframe" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="690">
                 <h3 class="wireframe__title">Wireframe</h3>
                 <picture class="wireframe__img">
                     <img loading="lazy" src="./assets/images/wireframe.jpg" alt="image of a website wireframe">
                 </picture>
             </div>
             <!-- design -->
-            <div class="design">
-                <h3 class="design__title">Design</h3>
+            <div class="design" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="690">
+                <h3 class=" design__title">Design</h3>
                 <picture class="design__img">
                     <img loading="lazy" src="./assets/images/design.jpg" alt="image of a website being design">
                 </picture>
             </div>
             <!-- development -->
-            <div class="development">
+            <div class="development" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="690">
                 <h3 class="development__title">Development</h3>
                 <picture class="development__img">
                     <img loading="lazy" src="./assets/images/development.jpg" alt="image of website being developed">
                 </picture>
             </div>
             <!-- optimization -->
-            <div class="optimization">
+            <div class="optimization" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="690">
                 <h3 class="optimization__title">Optimization</h3>
                 <picture class="optimization__img">
                     <img loading="lazy" src="./assets/images/optimization.jpg" alt="image of website being tested">
@@ -151,6 +158,11 @@
         </a>
         <p class="footer__copy">© roadtodev 2022</p>
     </footer>
+    <!-- aos scripts -->
+    <script src="./js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
