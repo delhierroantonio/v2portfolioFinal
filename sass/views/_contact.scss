@@ -48,6 +48,7 @@
                 border-radius: .5rem;
                 padding: .5em 2em;
                 transition: all .3s ease-in-out;
+                cursor: pointer;
 
                 &:hover {
                     color: $black;

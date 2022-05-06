@@ -455,7 +455,8 @@ main {
         border: 2px solid transparent;
         border-radius: .5rem;
         padding: .5em 2em;
-        transition: all .3s ease-in-out; }
+        transition: all .3s ease-in-out;
+        cursor: pointer; }
         .contact .form__container button:hover {
           color: #212529;
           background-color: #f8f9fa;
