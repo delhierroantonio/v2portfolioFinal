@@ -65,14 +65,4 @@
     .second__content__image {
         flex-basis: 60%;
     }
-
-    @include breakpoint(md) {
-        &__first {
-            @include flex(row, center, center);
-        }
-
-        &__second {
-            @include flex(row, center, center);
-        }
-    }
 }

@@ -38,7 +38,6 @@
             filter: opacity(80%);
             transition: all .2s ease-in-out;
 
-
             &:hover {
                 filter: opacity(100%);
                 transform: scale(1.02);
@@ -60,11 +59,5 @@
             font-weight: 300;
             line-height: 1.6;
         }
-    }
-}
-
-@include breakpoint(md) {
-    .skills {
-        @include flex(row, center, center);
     }
 }

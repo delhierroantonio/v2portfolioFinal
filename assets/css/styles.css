@@ -59,17 +59,6 @@ header {
     .nav__link:hover {
       color: #9b2125; }
 
-@media only screen and (min-width: 665px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; }
-    .nav__links {
-      gap: 2.2em; }
-    .nav__link {
-      font-size: 2.2rem; } }
-
 .footer {
   height: 12vh;
   background-color: #212529;
@@ -85,13 +74,6 @@ header {
     font-size: 2.2rem;
     color: black;
     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1); }
-
-@media only screen and (min-width: 665px) {
-  .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; } }
 
 header.index {
   width: 100%;
@@ -223,9 +205,6 @@ header.index {
       .main__img img:hover {
         transform: rotate(0) scale(1);
         transform: rotate(0) scale(1); }
-  @media only screen and (min-width: 665px) {
-    .main .main__social__icon {
-      width: 6rem; } }
 
 .devSteps {
   padding: 1.5em 2em;
@@ -262,9 +241,6 @@ header.index {
       aspect-ratio: 1 / 1;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
-  @media only screen and (min-width: 665px) {
-    .devSteps__layout {
-      grid-template-areas: "wireframe design" "development optimization"; } }
 
 .about {
   text-align: center;
@@ -314,17 +290,6 @@ header.index {
       line-height: 1.4; }
   .about .second__content__image {
     flex-basis: 60%; }
-  @media only screen and (min-width: 665px) {
-    .about__first {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; }
-    .about__second {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; } }
 
 .skills {
   width: 100%;
@@ -373,13 +338,6 @@ header.index {
       font-size: 2.2rem;
       font-weight: 300;
       line-height: 1.6; }
-
-@media only screen and (min-width: 665px) {
-  .skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; } }
 
 main {
   background-color: #f8f9fa;
@@ -507,5 +465,50 @@ main {
   .navbar-nav {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center; } }
+
+@media only screen and (min-width: 665px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .nav__links {
+      gap: 2.2em; }
+    .nav__link {
+      font-size: 2.2rem; } }
+
+@media only screen and (min-width: 665px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; } }
+
+@media only screen and (min-width: 665px) {
+  .main__social__icon {
+    width: 6rem; } }
+
+@media only screen and (min-width: 665px) {
+  __layout {
+    grid-template-areas: "wireframe design" "development optimization"; } }
+
+@media only screen and (min-width: 665px) {
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; } }
+
+@media only screen and (min-width: 665px) {
+  __first {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  __second {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center; } }

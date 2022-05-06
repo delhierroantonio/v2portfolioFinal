@@ -11,14 +11,8 @@
     }
 
     &__copy {
-        font-size: $md;
+        font-size: map-get($sizes, "md");
         color: rgba(0, 0, 0, 1);
         text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-    }
-}
-
-@include breakpoint(md) {
-    .footer {
-        @include flex(row, space-between, center);
     }
 }

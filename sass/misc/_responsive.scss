@@ -1,8 +1,65 @@
+// navbar
 @media (max-width:992px) {
     .navbar-nav {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@include breakpoint(md) {
+    .nav {
+        @include flex(row, space-between, center);
+
+        &__links {
+            gap: 2.2em;
+        }
+
+        &__link {
+            font-size: $md;
+        }
+    }
+}
+
+// footer
+@include breakpoint(md) {
+    .footer {
+        @include flex(row, space-between, center);
+    }
+}
+
+// INDEX HTML
+// social icons
+@include breakpoint(md) {
+    .main__social__icon {
+        width: 6rem;
+    }
+}
+
+// dev steps
+@include breakpoint(md) {
+    &__layout {
+        grid-template-areas:
+            "wireframe design"
+            "development optimization";
+    }
+}
+
+// SKILLS HTML
+@include breakpoint(md) {
+    .skills {
+        @include flex(row, center, center);
+    }
+}
+
+// ABOUT HTML
+@include breakpoint(md) {
+    &__first {
+        @include flex(row, center, center);
+    }
+
+    &__second {
+        @include flex(row, center, center);
     }
 }

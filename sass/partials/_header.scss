@@ -24,7 +24,7 @@ header {
 
     &__link {
         color: $white;
-        font-size: $sm;
+        font-size: map-get($sizes, "sm");
         @include linkTransition;
 
         &--active {
@@ -33,21 +33,6 @@ header {
 
         &:hover {
             color: #9b2125;
-        }
-    }
-}
-
-// navbar queries
-@include breakpoint(md) {
-    .nav {
-        @include flex(row, space-between, center);
-
-        &__links {
-            gap: 2.2em;
-        }
-
-        &__link {
-            font-size: $md;
         }
     }
 }

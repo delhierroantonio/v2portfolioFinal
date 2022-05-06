@@ -146,12 +146,6 @@ header.index {
             }
         }
     }
-
-    @include breakpoint(md) {
-        .main__social__icon {
-            width: 6rem;
-        }
-    }
 }
 
 // steps seccion
@@ -209,14 +203,6 @@ header.index {
             aspect-ratio: 1 / 1;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        }
-    }
-
-    @include breakpoint(md) {
-        &__layout {
-            grid-template-areas:
-                "wireframe design"
-                "development optimization";
         }
     }
 }
